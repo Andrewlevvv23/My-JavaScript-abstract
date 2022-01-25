@@ -1,8 +1,8 @@
 "use strict";
 
-//  const category = 'toys';
+const category = "toys";
 
-//  console.log('http://someurl.com/'+ category);
+console.log("http://someurl.com/" + category);
 
 // const user = "Andrew";
 
@@ -18,4 +18,3 @@
 // console.log(decr);
 
 // console.log(2+2*2 == "6");
-
