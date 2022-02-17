@@ -164,3 +164,57 @@ for (let i = 1; i < 10; i++) {
   num1++;
 }
 //можно прервать цикл условием 'if (i === 8) { break; }' или  'continue' чтобы пропустить число или переменную
+
+//______________________________________________________________функции в JS___________________________________________
+let num3 = 20;
+
+function showFirstMessage(text) {
+  //классическая функция, создается до начала выполеня скрипта
+  console.log("text");
+  num3 = 60;
+}
+showFirstMessage("text");
+console.log(num3);
+
+function calc(a, b) {
+  return a + b; //когда запустится функция она вернет сумму двух аргументов
+}
+
+console.log(calc(4, 3));
+console.log(calc(5, 6));
+console.log(calc(10, 8));
+
+function ret() {
+  let num = 50;
+  return (num = 50);
+}
+const anotherNum = ret();
+console.log(anotherNum);
+
+const logger = function () {
+  //второй вид, функция внутри переменной, обьявляется в по ходу кода
+  console.log("Hello Vasya");
+};
+logger();
+
+const calc1 = (a, b) => a + b; //сокращенный вариант клссической функции
+
+console.log(calc1(10, 800));
+
+//______________________________________________________________методы и свойства строк и чисел________________________
+
+const str1 = "test";
+const arr1 = [1, 2, 3];
+console.log(str1[3]); //выведет букву 't', из 'test'
+
+const logg = "Hello Petro";
+console.log(logg.slice(6, 11)); // вырежем слово 'Petro'
+
+console.log(logg.substring(6, 11)); //будет тоже самое
+
+const num4 = 12.2;
+console.log(Math.round(num4)); //округление до ближайшего целого числа
+
+const test2 = "12.2px";
+console.log(parseInt(test2)); //тоже самое только на числовой тип данных
+console.log(parseFloat(test2)); //возвращает истинное число без округлений
