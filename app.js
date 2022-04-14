@@ -1,119 +1,119 @@
-"use strict"; //режим современного кода
+"use strict"; //modern code mode
 
-let number1 = 5; //обьявление переменной и ее значения (изменяемая)
-const leftBorderWidth = 1; //обьявление переменной и ее значения (НЕ изменяемое)
-console.log(number1); //вывод результата команды в консоль терминала
-//_____________________________________________________________________________типы данных_______________________
-let number = 4.6; //числовой тип данных
-console.log(4 / 0); //'Infinity' бесконечность
-console.log("string" * 9); //'NaN' нет числа
+let number1 = 5; //declaration of a variable and its value (changeable)
+const leftBorderWidth = 1; //declaration of a variable and its value (not changeable)
+console.log(number1); //output the result of the command to the terminal console
+//_____________________________________________________________________________data type___________________________
+let number = 4.6; //numeric data type
+console.log(4 / 0); //'Infinity'
+console.log("string" * 9); //'NaN' not a namber
 
-let persone = "Andrew"; //строчный тип данных
-persone = "777"; //тоже строка
+let persone = "Andrew"; //string data type (written only in quotes!)
+persone = "777"; //also the string
 
-let bool = false; //булиновый тип данных ('да'или'нет')
+let bool = false; //boolean data type ('yes' or 'no')
 bool = true;
-//console.log(something); //'NaN' ссылка на не существующий объект
+//console.log(something); //'NaN' reference to a non-existent object
 let und;
-console.log(und); //'undefined' пустой объект
+console.log(und); //'undefined' empty object
 
 const obj = {
-  //объект, объединяет в себе разные типы данных
-  name: "Andrew", //двоеточие и запятые в конце
+  //object, that combines different types of data
+  name: "Andrew", //colon and commas at the end
   age: 24,
   isMarried: false,
 };
-//console.log(obj.name); // обратились к свойсту объекта 'name'
+//console.log(obj.name); // accessed an object property 'name'
 
-let arr = ["plum.png", "orange.jpg", 6, "apple.bmb"];
-//массив, все элементы имеют порядковый номер и идут через запятую, помещает любые типы данны
-console.log(arr[1]); //обращение к 1му элементу 'oranhe.jpg'
+let arr = ["plum.png", "orange.jpg", 6, "apple.bmb"]; //an array is a special case of an object
+//array, all elements have a serial number and are separated by commas, puts any data types
+console.log(arr[1]); //accessing element number 1 'oranhe.jpg'
 
-//_________________________________________________________________________общение с пользователем____________________
+//______________________________________________________________communication with the user____________________________
 
-alert("Hello"); //всплывающее окно с подтверждением действия, булиновое
+alert("Hello"); //pop-up window confirmation, boolean
 
-const result = confirm("Are you here"); //всплывающее окно с вопросом к пользователю, булиновое
-console.log(result); //обращение в консоль к переменной 'result'. Ответ булиновый
+const result = confirm("Are you here"); //pop-up window with a question to the user, boolean
+console.log(result); //output to the console variable 'result'. Boolean type
 
-const answer = prompt("Вам есть 18?", ""); //вопрос к пользователю с полем для ответа " "
-console.log(answer); //вывод ответа пользователя в консоль. Все ответы от пользователя приходят в виде строк!(+ число)
+const answer = +prompt("Вам есть 18?", ""); //question to the user with a field for the answer " ".
+console.log(answer); //output user response to console ('+' displays a numeric answer)
 
-const answers = []; //массив, с вопросами по порядку
+const answers = []; //array, with questions in order
 answers[0] = prompt("Как ваше имя?", "");
 answers[1] = prompt("Как ваша фамилия?", "");
 answers[2] = prompt("Сколько вам лет?", "");
 
-console.log(typeof answers); //вывод в консоль значения
+console.log(typeof answers); //output to console
 
-//______________________________________________________________________интерполяция______________________________
+//______________________________________________________________________interpolation______________________________
 
-const category = "toys"; //Динамическая интерполяция значения переменной в неограниченном количестве
+const category = "toys"; //Dynamic interpolation of variable value in unlimited number
 console.log(`https://someurl.com/${category}`);
 
 const user = "Andrewlev";
 alert(`Привет, ${user}`);
 
-//____________________________________________________________________логические операторы________________________
+//____________________________________________________________________logical operators_____________________________
 
-console.log("arr" + "- object"); //строка из двух слов
-console.log(444 + "- object"); //тоже строка из числа и слова
-//console.log(40 + +"50"); //числовое значение с унарным плюсом перед '5'
+console.log("arr" + "- object"); //string of two words
+console.log(444 + "- object"); //also a string of numbers and words
+//console.log(40 + +"50"); //numeric value with unary plus before '5'
 
 let incr = 10,
   decr = 10;
 
-incr++; //оператор инкромента, увеличение на еденицу  (постфиксный)
-decr--; //оператор декремента, уменьшение на еденицу (постфиксный)
-//префиксный оператор используется в консоли, плюс перед значением
+incr++; //increment operator, increase by one (postfix)
+decr--; //decrement operator, decrease by one (postfix)
+//prefix operator used in console, plus before value
 console.log(incr);
 console.log(decr);
 
-//console.log( 2 * 4 = 8 ); //присвоение значения
-console.log(2 * 4 == 8); //сравнение значений, действительно ли равно
-console.log(2 * 4 === "8"); //cтрогое сравнение значений, вместе с типами данных
+//console.log( 2 * 4 = 8 ); //value assignment
+console.log(2 * 4 == 8); //value comparison, is it really equal
+console.log(2 * 4 === "8"); //strict comparison of values, along with data types
 
-//&& //оба варианта правда
-//|| //один из вариантов правда
+//&& //both options are true (and)
+//|| //one of the options is true (or)
 
 const isChecked = true,
   isClose = true;
-console.log(isChecked && isClose); //если добавить оператор восклицания "!", он поменяет значение на противоположное
+console.log(isChecked && isClose); //if you add the exclamation operator "!", it will change the value to the opposite
 
-// '!=' не равно,  '!==' строго не равно вместе с типами данных
+// '!=' not equal,  '!==' strictly not equal together with data types
 
 //__________________________________________________________________система контроля версий 'GIT'______________________
-//git init - инициировать репозиторий
-//git config --global user.name 'Andrew'   -  имя
-//git config --global user.email 'Andrew'  - емеил
-//git status   - проврека контрольных точек объекта (commits)
-//git add -A  -все файлы репозитория добавляются в локальный GIT
-//git add main.css -добавить новый css файл в локальный репозиторий
-//git commit -a -m'first commit' -cохранение в локальный репозиторий, имя файла в каждом менять
-//git log  -вывод всех созданных коммитов в терминал с датами и названиями
-// далее закидываем репозиторий в хранилище GitHub копируя ссылку 'git remote add...'
-// далее сохраняем файл в хранилище с помощью команды 'git push -u origin main'
+/* git init - инициировать репозиторий
+git config --global user.name 'Andrew'   -  имя
+git config --global user.email 'Andrew'  - емеил
+git status   - проврека контрольных точек объекта (commits)
+git add -A  -все файлы репозитория добавляются в локальный GIT
+git add main.css -добавить новый css файл в локальный репозиторий
+git commit -a -m'first commit' -cохранение в локальный репозиторий, имя файла в каждом менять
+git log  -вывод всех созданных коммитов в терминал с датами и названиями
+далее закидываем репозиторий в хранилище GitHub копируя ссылку 'git remote add...'
+далее сохраняем файл в хранилище с помощью команды 'git push -u origin main'
 
-//Добавление нового 'js' файла в существующий репозиторий
-//git add -A   cохранение на локальный репозиторий GIT
-//git commit -a -m'add script file'  -добавить новый файл в локальный и удаленный репозиторий
-//git push  -сохранение на удаленный репозиторий в GitHub
+Добавление нового 'js' файла в существующий репозиторий
+git add -A   cохранение на локальный репозиторий GIT
+git commit -a -m'add script file'  -добавить новый файл в локальный и удаленный репозиторий
+git push  -сохранение на удаленный репозиторий в GitHub
 
-//______________________________________________________________cинхронизация между пользователями в 'GIT'_____________
-//на GitHub скопировать ссылку на репозиторий 'Clone or download'
-//cкопировать в терминале VSCode данную ссылку и написать название папки для копирования
-//git pull  -обновление содержания репозитория открыв его с другого ПК !!!
-//git push  -загрузить измененный файл на удаленный репозиторий в GitHub
+______________________________________________________________cинхронизация между пользователями в 'GIT'_____________
+на GitHub скопировать ссылку на репозиторий 'Clone or download'
+cкопировать в терминале VSCode данную ссылку и написать название папки для копирования
+git pull  -обновление содержания репозитория открыв его с другого ПК !!!
+git push  -загрузить измененный файл на удаленный репозиторий в GitHub */
 
-//______________________________________________________________условия в JS___________________________________________
+//______________________________________________________________conditions in JS_______________________________________
 if (5 == 4) {
-  //пример условия, они все начинаются на 'if'
+  //condition example, they all start with 'if'
   console.log("Ok!");
 } else {
-  //вторая часть, работает в случае не выполнения условия
+  //the second part, works if the condition is not met
   console.log("Error");
 }
-//!Условие внутри скобок должно быть преобразованно к булиновому значению 'True' или 'False'
+//!The condition inside the brackets must be converted to boolean 'True' or 'False'
 
 let num = 50;
 
@@ -125,13 +125,13 @@ if (num < 45) {
   console.log("Ok!");
 }
 //num === 50 ? console.log("Ok!") : console.log("Error");
-//условие          выполняеится         не выполняется       -благодаря тернарному оператору '?' и ':'
-//50 + 50 //бинарный оператор, две переменных
-//+50  //унарный оператор, одна переменная
+//the condition      is fulfilled   is not fulfilled      - thanks to the ternary operator '?' and ':'
+//50 + 50 //binary operator, two variables
+//+50  //unary operator, one variable
 
 const num2 = 100;
 switch (num2) {
-  //конструкций 'switch' только на строгое соотвествие === !
+  //'switch' constructs only for strict matching === !
   case 90:
     console.log("Не верно");
     break;
@@ -143,33 +143,33 @@ switch (num2) {
     break;
 }
 
-//______________________________________________________________циклы в JS____________________________________________
+//______________________________________________________________cycles in JS____________________________________________
 let num1 = 77;
 
 while (num1 <= 80) {
-  //пока условие не выполнено - выполнять такие-то действия
+  //until the condition is met - perform such and such actions
   console.log(num1);
-  num1++; //инкримента на еденицу
+  num1++; //increment per unit
 }
 
 do {
-  //при помощи его сначала цикл что-то делает а потом проверяется условие
+  //using it, first the loop does something and then the condition is checked
   console.log(num1);
   num1++;
-} while (num1 < 80); //проверяем условие при помощи 'while'
+} while (num1 < 80); //check condition with 'while'
 
 for (let i = 1; i < 10; i++) {
-  //тритерация: задется начало цикла, условие остановки цикла, шаг цикла
+  //triteration: the beginning of the cycle, the condition for stopping the cycle, the step of the cycle are set
   console.log(num1);
   num1++;
 }
-//можно прервать цикл условием 'if (i === 8) { break; }' или  'continue' чтобы пропустить число или переменную
+//you can break the loop with the condition 'if (i === 8) { break; }' or 'continue' to skip a number or variable
 
-//______________________________________________________________функции в JS___________________________________________
+//______________________________________________________________functions in JS_______________________________________
 let num3 = 20;
 
 function showFirstMessage(text) {
-  //классическая функция, создается до начала выполеня скрипта
+  //classic function, created before the script is executed
   console.log("text");
   num3 = 60;
 }
@@ -177,7 +177,7 @@ showFirstMessage("text");
 console.log(num3);
 
 function calc(a, b) {
-  return a + b; //когда запустится функция она вернет сумму двух аргументов
+  return a + b; //when the function is run it will return the sum of the two arguments
 }
 
 console.log(calc(4, 3));
@@ -192,29 +192,143 @@ const anotherNum = ret();
 console.log(anotherNum);
 
 const logger = function () {
-  //второй вид, функция внутри переменной, обьявляется в по ходу кода
+  //the second kind, a function inside a variable, is declared in the course of the code
   console.log("Hello Vasya");
 };
 logger();
 
-const calc1 = (a, b) => a + b; //сокращенный вариант клссической функции
+const calc1 = (a, b) => a + b; //shortened version of the classic function
 
 console.log(calc1(10, 800));
 
-//______________________________________________________________методы и свойства строк и чисел________________________
+//______________________________________________________________methods and properties of strings and numbers__________
 
 const str1 = "test";
 const arr1 = [1, 2, 3];
-console.log(str1[3]); //выведет букву 't', из 'test'
+console.log(str1[3]); //will output the letter 't' from 'test'
 
 const logg = "Hello Petro";
-console.log(logg.slice(6, 11)); // вырежем слово 'Petro'
+console.log(logg.slice(6, 11)); // cut out the word 'Petro'
 
 console.log(logg.substring(6, 11)); //будет тоже самое
 
 const num4 = 12.2;
-console.log(Math.round(num4)); //округление до ближайшего целого числа
+console.log(Math.round(num4)); //rounding to the nearest whole number
 
 const test2 = "12.2px";
-console.log(parseInt(test2)); //тоже самое только на числовой тип данных
-console.log(parseFloat(test2)); //возвращает истинное число без округлений
+console.log(parseInt(test2)); //the same only for the numeric data type
+console.log(parseFloat(test2)); //returns true number without rounding
+
+//______________________________________________________________CallBack- function______________________________________
+
+function first() {
+  //500 milliseconds function delay
+  setTimeout(function () {
+    console.log(1);
+  }, 500);
+}
+
+function second() {
+  //standard function without delay, displayed first in the console
+  console.log(2);
+}
+
+first();
+second();
+
+function learnJS(lang, callback) {
+  console.log(`Я учу: ${lang}`);
+  callback(); //allows code to be executed only after another code's action has completed
+}
+
+function done() {
+  console.log("Я прошел этот урок");
+}
+
+learnJS("JavaScript", done); //passing the 'done' function
+
+//______________________________________________________________Object destructuring______________________________
+
+const options = {
+  name: "test", //name
+  width: 1024, //width
+  height: 1024, //height
+  colors: {
+    border: "black",
+    bg: "red",
+  },
+  makeTest: function () {
+    //method inside an object
+    console.log("Test");
+  },
+};
+
+options.makeTest(); //run this method
+
+const { border, bg } = options.colors; //destructuring, removed properties from an object as separate variables
+
+console.log(Object.keys(options).length); //show the number of elements in an object
+delete options.name; //removing a property from an object
+let couner = 0; //show the number of properties in an object
+//counter++; //enter at the end of the condition for counting properties in the object
+
+for (let key in options) {
+  //way to iterate 'for' 'in', change properties inside the object
+  if (typeof options[key] === "object") {
+    for (let i in options[key]) {
+      console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
+    }
+  } else {
+    console.log(`Свойство ${key} имеет значение ${options[key]}`);
+  }
+}
+
+//______________________________________________________________arrays and imaginary arrays____________________________
+
+const arr2 = [2, 3, 6, 8, 10];
+//arr2.pop(); //removes the last element from the array
+//arr2.push(10); //adds an element at the end of the array
+console.log(arr2);
+
+for (let i = 0; i < arr2.length; i++) {
+  //the loop will work until the objects inside the array run out
+  console.log(arr2[i]); //to access an element of an array, you need to put it in '[]'
+}
+
+for (let value of arr2) {
+  //enumeration design 'for...of' ('value' display of each individual element) can be stopped with the 'break' command
+  console.log(value); //it turns out the same result as in the above array, it works only with arrays!
+}
+let arr3 = [2, 3, 6, 8, 9];
+arr3.forEach(function (item, i, arr3) {
+  console.log(`${i}: ${item} inside an array ${arr3}`);
+}); //method, meeting to iterate over all elements inside an array
+
+const str = prompt("", "");
+const products = str.split(", "); //created an array of strings
+console.log(products.join("; ")); //glued the array into one line
+products.sort(); //sorts the elements, but only lines!
+
+function compareNum(a, b) {
+  return a - b;
+}
+
+//______________________________________________________________Prototyping Legacy__________________________________
+let str3 = "some";
+//let str3Obj = new String(str3); //created an object which turned back into a string
+
+console.log(typeof str3);
+console.log(typeof str3Obj);
+
+console.dir([1, 2, 3]);
+
+const soldier = {
+  health: 400,
+  armor: 100,
+  sayHello: function () {
+    console.log("Hello");
+  },
+};
+
+const jonh = Object.create(soldier); //allows you to take properties from the object's prototype
+jonh.sayHello();
